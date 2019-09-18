@@ -8,10 +8,10 @@ int main(int argc, char *argv[]) {
   if(argc == 3) {
     char *word1 = argv[1];
     char *word2 = argv[2];
-    word1 = sort(word1);
-    word2 = sort(word2);
     printf("First Word: %s\n", word1);
     printf("Second Word: %s\n", word2);
+    word1 = sort(word1);
+    word2 = sort(word2);
     int result = strcompare(word1, word2);
     if(result != -1) {
       printf("They are anagram\n");
