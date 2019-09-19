@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int length(char *);
-char capitalize(char);
+void capitalize(char *);
 
 int main(int argc, char *argv[]) {
   if(argc != 2 )
@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     int len = length(word);
     for(int i = 0; i < len; i++)
       if(*(word + i) == *word || *((word + i - 1)) == ' ')
-        *(word + i) = capitalize(*(word + i));
+        capitalize((word + i));
     printf("Capitalized: %s\n", word);
   }
   return 0;
@@ -28,8 +28,7 @@ int length(char *word) {
   return len;
 }
 
-char capitalize(char c) {
-  if(c > 96)
-    return c - 32;
-  return c;
+void capitalize(char *c) {
+  if(*c > 96)
+    *c = *c - 32;
 }
