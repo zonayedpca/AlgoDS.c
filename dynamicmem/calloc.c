@@ -10,7 +10,7 @@ int main() {
       printf("Enter the element: ");
       scanf("%d", (array + i));
     }
-    printf("Priting all the elements...");
+    printf("Priting all the elements...\n");
     for(int i = 0; i < ARRAY_SIZE; i++) {
       printf("Element is: %d \n", *(array + i));
     }
