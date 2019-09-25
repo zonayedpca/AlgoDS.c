@@ -4,7 +4,7 @@
 #define ARRAY_SIZE 10
 
 int main() {
-  int *array = calloc(sizeof(int), ARRAY_SIZE);
+  int *array = calloc(ARRAY_SIZE, sizeof(int));
   if(array) {
     for(int i = 0; i < ARRAY_SIZE; i++) {
       printf("Enter the element: ");
