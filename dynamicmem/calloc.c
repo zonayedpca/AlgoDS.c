@@ -14,6 +14,7 @@ int main() {
     for(int i = 0; i < ARRAY_SIZE; i++) {
       printf("Element is: %d \n", *(array + i));
     }
+    free(array);
   } else {
     printf("Failed to allocate enough memory!\n");
   }
